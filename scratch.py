@@ -1,0 +1,2 @@
+def printNew():
+    print("hello")
