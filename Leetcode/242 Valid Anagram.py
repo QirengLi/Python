@@ -1,4 +1,8 @@
 def isAnagram(s, t):
+
+    if len(s) != len(t):
+        return False
+
     str_dict = {}
 
     for i in s:
@@ -29,9 +33,13 @@ def isAnagram(s, t):
 # Below function doesn't remove anything from the dictionary but instead, subtracts the count
 # of the chars and then checks all the values to see if it equals 0
 
-# both solutions are space and time complexity of O(n)
+# both solutions are space and time complexity of O(n) OR O( s+t )
 
 def isAnagram(s, t):
+
+    if len(s) != len(t):
+        return False
+
     str_dict = {}
 
     for i in s:
