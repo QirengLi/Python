@@ -22,7 +22,7 @@ while left < right:
             right -= 1
 
 
-Slow and Fast pointer -- See "AM Remove Duplicates"
+Slow and Fast pointer -- See "AM Remove Duplicates" OR "283 Move Zeroes"
 
 Slow pointer only moves when a condition is met. Usually fast pointer is the one doing the checking and comparing
 to the slow pointer.
