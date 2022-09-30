@@ -1,0 +1,33 @@
+Characteristics of Two pointers
+
+1.) Two moving pointers, regardless of directions, moving dependently or independently;
+2.) A function that utilizes the entries referenced by the two pointers, which relates to the answer in a way;
+3.) An easy way of deciding which pointer to move;
+4.) A way to process the array when the pointers are moved.
+
+
+
+
+Basic Template
+
+left = 0
+right = len(nums) - 1
+
+while left < right:
+    ... default/base case to return answer
+
+    ... if statements condition/comparison
+            left += 1
+    ... elif or else condition
+            right -= 1
+
+
+Slow and Fast pointer -- See "AM Remove Duplicates"
+
+Slow pointer only moves when a condition is met. Usually fast pointer is the one doing the checking and comparing
+to the slow pointer.
+
+slow = 0
+for fast in range(len(nums)):
+    ... if statement
+            change slow pointer
