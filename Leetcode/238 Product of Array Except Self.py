@@ -66,7 +66,5 @@ def productExceptSelfTwo(nums):
 
     return res
 
-    return res
-
 # Time Complexity O(n)
 # Space Complexity O(1)
