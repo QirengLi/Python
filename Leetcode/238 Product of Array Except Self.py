@@ -54,10 +54,30 @@ def productExceptSelf(nums):
 def productExceptSelfTwo(nums):
     res = [1] * (len(nums))
 
+# input array - nums = [4, 5, 1, 8, 2]
+# res = [1, 1, 1, 1, 1,]
+# currProduct = 1
+# res[0] = 1 |-> currProduct = currProduct * nums[0] = 1 * 4 = 4
+# res[1] = 4 |-> currProduct = currProduct * nums[1] = 4 * 5 = 20
+# res[2] = 20 |-> currProduct = currProduct * nums[2] = 20 * 1 = 20
+# res[3] = 20 |-> currProduct = currProduct * nums[3] = 20 * 8 = 160
+# res[4] = 160 |-> currProduct = currProduct * nums[4] = 160 * 2 = 320
+# res = [1, 4, 20, 20, 160]
+
     currProduct = 1
     for i in range(len(nums)):
         res[i] = currProduct
         currProduct *= nums[i]
+
+# input array - nums = [4, 5, 1, 8, 2]
+# res = [1, 4, 20, 20, 160]
+# currProduct = 1
+# res[4] = res[4] * currProduct = 160 * 1 = 160 |-> currProduct = currProduct * nums[4] = 1 * 2 = 2
+# res[3] = res[3] * currProduct = 20 * 2 = 40 |-> currProduct = currProduct * nums[3] = 2 * 8 = 16
+# res[2] = res[2] * currProduct = 20 * 16 = 320 |-> currProduct = currProduct * nums[2] = 16 * 1 = 16
+# res[1] = res[1] * currProduct = 4 * 16 = 64 |-> currProduct = currProduct * nums[1] = 16 * 5 = 80
+# res[0] = res[0] * currProduct = 1 * 80 = 80 |-> currProduct = currProduct * nums[0] = 80 * 4 = 320
+# res = [80, 64, 320, 40, 160]
 
     currProduct = 1
     for i in range(len(nums) - 1, -1, -1):
@@ -66,5 +86,8 @@ def productExceptSelfTwo(nums):
 
     return res
 
+# input array - nums = [4, 5, 1, 8, 2]
+# First for loop = [1, 4, 20, 20, 160]
+# Second for loop/answer = [80, 64, 320, 40, 160]
 # Time Complexity O(n)
 # Space Complexity O(1)
